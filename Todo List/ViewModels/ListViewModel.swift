@@ -22,7 +22,13 @@ class ListViewModel: ObservableObject {
     
     
     
-    @Published var items: [ItemModel] = []
+    @Published var items: [ItemModel] = [] {
+        didSet {
+            saveItems()
+        }
+    }
+    
+    let itemsKey: String = "item_list"
     
     
     init() {
@@ -31,13 +37,11 @@ class ListViewModel: ObservableObject {
     
     
     func getItems() {
-        let newItems = [
-            ItemModel.init(title: "This is first title", isCompleted: false),
-            ItemModel.init(title: "This Second ", isCompleted: true),
-            ItemModel.init(title: " Third", isCompleted: true)
-            
-        ]
-        items.append(contentsOf: newItems)
+        guard
+            let data = UserDefaults.standard.data(forKey: itemsKey),
+            let savedItems = try? JSONDecoder().decode([ItemModel].self, from: data)
+        else { return }
+        self.items = savedItems
     }
     
     
@@ -61,4 +65,11 @@ class ListViewModel: ObservableObject {
             items[index] = item.updateCompletion()
         }
     }
-}
+        func saveItems() {
+            if let encodedData = try? JSONEncoder().encode(items) {
+                UserDefaults.standard.set(encodedData, forKey: itemsKey)
+                
+            }
+        }
+    }
+
