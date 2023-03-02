@@ -15,6 +15,7 @@
 		B1A0FAF629AF9B6300A8A564 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0FAF529AF9B6300A8A564 /* ListView.swift */; };
 		B1A0FAF829AF9DF700A8A564 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0FAF729AF9DF700A8A564 /* ListRowView.swift */; };
 		B1A0FAFA29AFA15D00A8A564 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0FAF929AFA15D00A8A564 /* AddView.swift */; };
+		B1E18C7F29B0D3860018D68F /* NoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E18C7E29B0D3860018D68F /* NoItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B1A0FAF529AF9B6300A8A564 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		B1A0FAF729AF9DF700A8A564 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		B1A0FAF929AFA15D00A8A564 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		B1E18C7E29B0D3860018D68F /* NoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				B1A0FAF529AF9B6300A8A564 /* ListView.swift */,
 				B1A0FAF729AF9DF700A8A564 /* ListRowView.swift */,
 				B1A0FAF929AFA15D00A8A564 /* AddView.swift */,
+				B1E18C7E29B0D3860018D68F /* NoItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B15DD0A429B0578600EF04BF /* ItemModel.swift in Sources */,
+				B1E18C7F29B0D3860018D68F /* NoItemView.swift in Sources */,
 				B1A0FAFA29AFA15D00A8A564 /* AddView.swift in Sources */,
 				B15DD0A729B0633B00EF04BF /* ListViewModel.swift in Sources */,
 				B1A0FAE729AF8F0D00A8A564 /* Todo_ListApp.swift in Sources */,
